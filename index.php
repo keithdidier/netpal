@@ -1,11 +1,5 @@
 <?php 
-    $con = mysqli_connect("localhost", "root", "root", "netpal"); // Connection variable
-
-    if(mysqli_connect_errno()) {
-        echo "Failed to connect: " . mysqli_connect_errno();
-    }
-
-    $query = mysqli_query($con, "INSERT INTO test VALUES ('2', 'bob')"); // Inserts data into DB
+    require 'config/config.php';
 ?>
 
 <!DOCTYPE html>
