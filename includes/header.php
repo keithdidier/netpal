@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>NetPal</title>
+    <title>Social Splash</title>
     <!-- JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="assets/js/bootstrap.js"></script>
@@ -28,15 +28,17 @@
 
 <div class="top-bar">
     <div class="logo">
-        <a href="index.php">NetPal</a>
+        <a href="index.php">Social Splash</a>
     </div>
 
     <nav>
-        <a href=""><?php echo $user['first_name']; ?></a>
-        <a href=""><i class="fa fa-home" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-bell" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-users" aria-hidden="true"></i></a>   
-        <a href=""><i class="fa fa-cog" aria-hidden="true"></i></a>                      
+        <a href="<?php echo $userLoggedIn; ?>"><?php echo $user['first_name']; ?></a>
+        <a href=""><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-bell fa-lg" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-users fa-lg" aria-hidden="true"></i></a>   
+        <a href=""><i class="fa fa-cog fa-lg" aria-hidden="true"></i></a>                      
     </nav>
 </div>
+
+<div class="wrapper">
