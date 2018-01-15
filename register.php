@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>NetPal</title>
+    <title>Social Splash</title>
     <link rel="stylesheet" type="text/css" href="assets/css/register_style.css"></link>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="assets/js/register.js"></script>
@@ -33,7 +33,7 @@
     <div id="wrapper">
         <div class="login-box">
             <div class="login-header">
-                <h1>NetPal</h1>
+                <h1>Social Splash</h1>
                 <span>Login or signup!</span>
             </div>
 
