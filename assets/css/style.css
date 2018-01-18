@@ -3,7 +3,8 @@
 
 body {
     line-height: 17px;
-    background-color: #e6eae8;
+    /* background-color: #e6eae8; */
+    background-color: #f5f5f5;
 }
 
 .top-bar {
@@ -51,7 +52,7 @@ nav a:hover {
 
 .wrapper {
     margin: 0 auto;
-    top: 100px;
+    top: 70px;
     position: relative;
     padding: 0 10px;
     width: 75%;
@@ -61,9 +62,9 @@ nav a:hover {
 .column {
     background-color: #fff;
     padding: 10px;
-    border: 1px solid #d3d3d3;
-    border-radius: 5px;
-    box-shadow: 2px 2px 1px #d3d3d3;
+    /* border: 1px solid #d3d3d3; */
+    border-radius: 2px;
+    box-shadow: 0 1px 1px 0 #ccc;
     z-index: -1;
 }
 
@@ -103,13 +104,18 @@ nav a:hover {
     border-radius: 2px;
     margin-right: 5px;
     border: 1px solid #d3d3d3;
-    font-size: 12px;
+    font-size: 14px;
+    color: rgb(34, 34, 34);
+    font-family: 'Roboto', sans-serif;
     padding: 5px;
     resize: vertical;
 }
 
 textarea:focus {
     outline: none;
+    border: 1px solid #00BCD4;
+    border-radius: 8px;
+    padding: 8px;
 }
 
 .post-form input[type="submit"] {
@@ -129,4 +135,30 @@ textarea:focus {
 
 .post-form input[type="submit"]:active {
     padding: 5px 4px 4px 5px;
+}
+
+.status-post {
+    width: 96%;
+    font-size: 15px;
+    padding: 0px 5px;
+    min-height: 75px;
+}
+
+.post-profile-pic {
+    float: left;
+    margin-right: 10px;
+}
+
+.post-profile-pic img {
+    border-radius: 50px;
+}
+
+
+
+
+
+
+
+#post-body {
+    margin: 7px 0;
 }
