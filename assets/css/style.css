@@ -4,7 +4,12 @@
 body {
     line-height: 17px;
     /* background-color: #e6eae8; */
-    background-color: #f5f5f5;
+    background-color: #f8faf7;
+}
+
+a {
+    text-decoration: none;
+    color: #121212;
 }
 
 .top-bar {
@@ -12,8 +17,7 @@ body {
     min-width: 1050px;
     height: 60px;
     background-color: #00BCD4;
-    border-bottom: 1px solid #9e9e9e;
-    opacity: 0.93;
+    border-bottom: 1px solid #fff;
     margin: 0 0 10px 0;
     display: inline-flex;
     position: fixed;
@@ -111,7 +115,7 @@ nav a:hover {
     resize: vertical;
 }
 
-textarea:focus {
+.post-form textarea:focus {
     outline: none;
     border: 1px solid #00BCD4;
     border-radius: 8px;
@@ -142,6 +146,7 @@ textarea:focus {
     font-size: 15px;
     padding: 0px 5px;
     min-height: 75px;
+    cursor: pointer;
 }
 
 .post-profile-pic {
@@ -153,12 +158,82 @@ textarea:focus {
     border-radius: 50px;
 }
 
-
-
-
-
-
-
 #post-body {
     margin: 7px 0;
+}
+
+#comment_iframe {
+    max-height: 250px;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 5px;
+}
+
+.comment_section {
+    padding: 0 5px 5px 5px;
+    background-color: #fff;
+}
+
+.comment_section img {
+    margin: 0 7px;
+    border-radius: 50%;
+}
+
+#comment_form textarea {
+    border-color: #d3d3d3;
+    width: 85%;
+    height: 35px;
+    border-radius: 2px;
+    color: #121212;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    margin: 3px 3px 3px 7px;
+    resize: vertical;
+    outline: none;
+}
+
+#comment_form input[type="submit"] {
+    border: none;
+    background-color: #00BCD4;
+    color: #fff;
+    font-size: 110%;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    border-radius: 2px;
+    width: 13%;
+    height: 40px;
+    margin-top: 3px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.NewsFeedPostOptions {
+    padding: 0;
+    text-decoration: none;
+    color: #00BCD4;
+    border: none;
+}
+
+.NewsFeedPostOptions iframe {
+    border: 0px;
+    height: 17px;
+    width: 120px;
+}
+
+.comment_like {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    color: #00BCD4;
+    padding: 0;
+    height: auto;
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+}
+
+.like_value {
+    display: inline;
+    font-size: 14px;
+    color: #00BCD4;
 }
