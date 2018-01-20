@@ -1,4 +1,7 @@
 <?php
+ error_reporting(E_ALL);
+ ini_set('display_errors', 1);
+
 class Post {
 	private $user_obj;
 	private $con;
@@ -80,9 +83,10 @@ class Post {
 				$added_by_obj = new User($this->con, $added_by);
 				if($added_by_obj->isClosed()) {
 					continue;
-				}
-
-				
+                }
+                
+                $user_logged_obj = new User($this->con, $userLoggedIn);
+                if($user_logged_obj->isFriend($added_by)) {
 
 					if($num_iterations++ < $start)
 						continue; 
@@ -100,8 +104,29 @@ class Post {
 					$user_row = mysqli_fetch_array($user_details_query);
 					$first_name = $user_row['first_name'];
 					$last_name = $user_row['last_name'];
-					$profile_pic = $user_row['profile_pic'];
+                    $profile_pic = $user_row['profile_pic'];
+                    
 
+                    ?>
+                        <script>
+                            function toggle<?php echo $id; ?>() {
+                                var target = $(event.target);
+
+                                if(!target.is("a")) {
+                                    var element = document.getElementById("toggleComment<?php echo $id; ?>");
+
+                                    if(element.style.display == "block") {
+                                        element.style.display = "none";
+                                    } else {
+                                        element.style.display = "block";
+                                    }
+                                }
+                            }
+                        </script>
+                    <?php
+
+                    $comments_check = mysqli_query($this->con, "SELECT * FROM comments WHERE post_id='$id'");
+                    $comments_check_num = mysqli_num_rows($comments_check);
 
 					//Timeframe
 					$date_time_now = date("Y-m-d H:i:s");
@@ -167,7 +192,7 @@ class Post {
 						}
 					}
 
-					$str .= "<div class='status-post'>
+					$str .= "<div class='status-post' onClick='javascript:toggle$id()'>
 								<div class='post-profile-pic'>
 									<img src='$profile_pic' width='50'>
 								</div>
@@ -177,11 +202,22 @@ class Post {
 								</div>
 								<div id='post-body'>
 									$body
-									<br>
-								</div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </div>
+                                
+                                <div class='NewsFeedPostOptions'>
+                                    Comments($comments_check_num)&nbsp;&nbsp;&nbsp;
+                                    <iframe src='like.php?post_id=$id' scrolling='no'></iframe>
+                                </div>
 
-							</div>
-							<hr>";
+                            </div>
+                            <div class='post_comment' id='toggleComment$id' style='display:none'>
+                                <iframe src='comment_frame.php?post_id=$id' id='comment_iframe' frameborder='0'></iframe>
+                            </div>
+                            <hr>";
+                }
 				
 
 			} //End while loop
