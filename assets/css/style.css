@@ -237,3 +237,136 @@ nav a:hover {
     font-size: 14px;
     color: #00BCD4;
 }
+
+.profile_left {
+    /* top: -10px; */
+    width: 25%;
+    max-width: 500px;
+    min-width: 130px;
+    height: 100vh;
+    float: left;
+    position: relative;
+    top: -10px;
+    background-color: #fff;
+    /* border: 2px solid #00BCD4; */
+    /* border-right: 3px solid #008192; */
+    box-shadow: 0 1px 1px 0 #ccc;
+    color: #333;
+    margin-right: 20px;
+}
+
+.profile_left img {
+    min-width: 80px;
+    width: 55%;
+    margin: 20px;
+    border: 1px solid #d3d3d3;
+    border-radius: 2px;
+}
+
+.profile_info {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.profile_info p {
+    margin-left: 20px;
+    word-wrap: break-word;
+}
+
+.danger {
+    background-color: #e74c3c;
+}
+
+.warning {
+    background-color: #f0ad4e;
+}
+
+.default {
+    background-color: #bdc3c7;
+}
+
+.success {
+    background-color: #2ecc71;
+}
+
+.info {
+    background-color: #3498db;
+}
+
+.deep_blue {
+    background-color: #0043f0;
+}
+
+.profile_left input[type="submit"] {
+    /* background-color: #00BCD4; */
+    /* padding: 12px 24px; */
+    width: 55%;
+    height: 40px;
+    border-radius: 2px;
+    border: none;
+    margin: 5px 0 7px 20px;
+    color: #fff;
+    font-family: 'Ranga', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+
+
+#accept_button {
+    background-color: #00BCD4;
+    padding: 5px 10px;
+    border: 1px solid #00BCD4;
+    border-radius: 2px;
+    margin: 5px 10px 10px 0px;
+    color: #fff;
+    font-family: 'Ranga', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#ignore_button {
+    padding: 5px 10px;
+    border: 1px solid #00BCD4;
+    border-radius: 2px;
+    margin: 5px 0px 10px 0px;
+    color: #333;
+    font-family: 'Ranga', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#modal_post_button {
+    background-color: #00BCD4;
+    padding: 8px 20px;
+    border: 1px solid #00BCD4;
+    border-radius: 2px;
+    margin: 5px 0px 10px 0px;
+    color: #fff;
+    font-family: 'Ranga', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#modal_cancel_button {
+    background-color: transparent;
+    padding: 8px 20px;
+    border: 1px solid #00BCD4;
+    border-radius: 2px;
+    margin: 5px 5px 10px 0px;
+    color: #333;
+    font-family: 'Ranga', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+}
